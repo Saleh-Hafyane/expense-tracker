@@ -1,5 +1,6 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import React from "react";
+import { getFormattedDate } from "../Util/date";
 
 const ExpenseItem = ({ title, amount, date }) => {
   return (
@@ -7,7 +8,7 @@ const ExpenseItem = ({ title, amount, date }) => {
       <View style={styles.container}>
         <View>
           <Text style={styles.title}>{title}</Text>
-          <Text style={styles.date}>{date.toString()}</Text>
+          <Text style={styles.date}>{getFormattedDate(date)}</Text>
         </View>
         <View style={styles.amountContainer}>
           <Text style={styles.amount}>{amount}</Text>
