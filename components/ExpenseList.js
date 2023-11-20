@@ -1,16 +1,13 @@
 import { View, Text, FlatList, SafeAreaView } from "react-native";
 import React from "react";
-const Item = ({ title }) => (
-  <View>
-    <Text>{title}</Text>
-  </View>
-);
+import ExpenseItem from "./ExpenseItem";
+
 const ExpenseList = ({ expenses }) => {
   return (
     <SafeAreaView>
       <FlatList
         data={expenses}
-        renderItem={({item}) => <Item title={item.title} />}
+        renderItem={({item}) => <ExpenseItem title={item.title} amount={item.amount} date={item.date} />}
         keyExtractor={(item) => item.id}
       />
     </SafeAreaView>
