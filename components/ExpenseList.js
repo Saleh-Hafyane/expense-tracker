@@ -7,7 +7,7 @@ const ExpenseList = ({ expenses }) => {
     <SafeAreaView>
       <FlatList
         data={expenses}
-        renderItem={({item}) => <ExpenseItem title={item.title} amount={item.amount} date={item.date} />}
+        renderItem={({item}) => <ExpenseItem id={item.id} title={item.title} amount={item.amount} date={item.date} />}
         keyExtractor={(item) => item.id}
       />
     </SafeAreaView>
