@@ -7,7 +7,7 @@ import RecentExpenses from "./screens/RecentExpenses";
 import AllExpenses from "./screens/AllExpenses";
 import ManageExpense from "./screens/ManageExpense";
 import { Ionicons } from "@expo/vector-icons";
-import IconButton from "./UI/IconButton";
+import IconButton from "./components/UI/IconButton";
 import ExpenseContextProvider from "./context/expense_context";
 
 const Stack = createNativeStackNavigator();

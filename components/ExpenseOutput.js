@@ -3,17 +3,24 @@ import React from "react";
 import ExpenseSummary from "./ExpenseSummary";
 import ExpenseList from "./ExpenseList";
 
-const ExpenseOutput = ({ expenses, expensesPeriod }) => {
+const ExpenseOutput = ({ expenses, expensesPeriod, emptyExpensesText }) => {
+  const ExpensesFound = () => {
+    if (expenses.length > 0) {
+      return <ExpenseList expenses={expenses} />;
+    } else {
+      return <Text>{emptyExpensesText}</Text>;
+    }
+  };
   return (
     <View style={styles.container}>
       <ExpenseSummary expenses={expenses} periodTitle={expensesPeriod} />
-      <ExpenseList expenses={expenses} />
+      <ExpensesFound />
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     padding: 24,
   },
 });

@@ -7,11 +7,19 @@ const RecentExpence = () => {
   const expensesCtx = useContext(ExpenseContext);
   const recentExpenses = expensesCtx.expenses.filter((expense) => {
     const today = new Date();
-    const sevenDaysAgo = getDateMinusDays(today, 14);
-    return expense.data > sevenDaysAgo;
+    const sevenDaysAgo = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDay() - 7
+    );
+    return expense.date > sevenDaysAgo;
   });
   return (
-    <ExpenseOutput expenses={recentExpenses} expensesPeriod="Last 14 Days" />
+    <ExpenseOutput
+      expenses={recentExpenses}
+      expensesPeriod="Last 7 Days"
+      emptyExpensesText="There is no expenses in the last 7 days"
+    />
   );
 };
 
