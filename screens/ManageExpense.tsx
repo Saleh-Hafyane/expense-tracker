@@ -3,8 +3,12 @@ import React, { useContext, useLayoutEffect } from "react";
 import IconButton from "../components/UI/IconButton";
 import { ExpenseContext } from "../context/expense_context";
 import ExpenseForm from "../components/Form/ExpenseForm";
-import { deleteExp, store, storeExpense, updateExp, updateExpense } from "../Util/http";
-const ManageExpense = ({ route, navigation }) => {
+import { deleteExp, storeExpense, updateExp, } from "../Util/http";
+interface ManageExpenseProps {
+  route: any;
+  navigation: any;
+}
+const ManageExpense: React.FC<ManageExpenseProps> = ({ route, navigation }) => {
   const expenseCtx = useContext(ExpenseContext);
   const expenseId = route.params?.expenseId;
   const isEditing = !!expenseId;

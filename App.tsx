@@ -8,10 +8,12 @@ import AllExpenses from "./screens/AllExpenses";
 import ManageExpense from "./screens/ManageExpense";
 import { Ionicons } from "@expo/vector-icons";
 import IconButton from "./components/UI/IconButton";
-import ExpenseContextProvider from "./context/expense_context";
+import { ExpenseContext, ExpenseContextProvider } from "./context/expense_context";
+
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
+
 
 const Expenses = () => (
   <BottomTab.Navigator

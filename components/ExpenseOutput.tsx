@@ -2,8 +2,13 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import ExpenseSummary from "./ExpenseSummary";
 import ExpenseList from "./ExpenseList";
+interface ExpenseOutputProps {
+  expenses: Array<any>;
+  expensesPeriod: string;
+  emptyExpensesText: string;
+}
+const ExpenseOutput : React.FC<ExpenseOutputProps> = ({ expenses, expensesPeriod, emptyExpensesText }) => {
 
-const ExpenseOutput = ({ expenses, expensesPeriod, emptyExpensesText }) => {
   const ExpensesFound = () => {
     if (expenses.length > 0) {
       return <ExpenseList expenses={expenses} />;
