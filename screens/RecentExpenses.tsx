@@ -19,7 +19,7 @@ const RecentExpence = () => {
     const sevenDaysAgo = new Date(
       today.getFullYear(),
       today.getMonth(),
-      today.getDay() - 7
+      today.getDate() - 7
     );
     return expense.date > sevenDaysAgo;
   });

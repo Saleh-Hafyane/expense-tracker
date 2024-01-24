@@ -12,20 +12,24 @@ const ExpenseSummary = ({ expenses, periodTitle }) => {
 };
 const styles = StyleSheet.create({
   container: {
-    padding: 7,
+    padding: 30,
+    borderBottomStartRadius:30,
+    borderBottomEndRadius:30,
     backgroundColor: "#F1EB90",
-    borderRadius: 4,
+
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    elevation:5,
+
   },
   title: {
-    fontSize: 14,
+    fontSize: 25,
     color: "#EC8F5E",
-    fontWeight: "900",
+    fontWeight: "700",
   },
   sum:{
-    fontSize: 18,
+    fontSize: 30,
     color: "#EC8F5E",
     fontWeight: "900",
   }

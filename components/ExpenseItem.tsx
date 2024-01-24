@@ -47,14 +47,15 @@ const ExpenseItem: React.FC<ExpenseItemProps> = ({ id, title, amount, date }) =>
 
 const styles = StyleSheet.create({
   container: {
-    padding: 12,
-    marginVertical: 8,
+    padding: 20,
+    marginTop: 17,
+    marginHorizontal:20,
     backgroundColor: "#F3B664",
     flexDirection: "row",
     justifyContent: "space-between",
-    borderRadius: 4,
-    elevation: 2,
-    shadowRadius: 4,
+    borderRadius: 30,
+    elevation: 5,
+    shadowRadius: 30,
   },
   title: {
     fontSize: 16,

@@ -26,7 +26,7 @@ const ExpenseOutput : React.FC<ExpenseOutputProps> = ({ expenses, expensesPeriod
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
+
   },
 });
 export default ExpenseOutput;
